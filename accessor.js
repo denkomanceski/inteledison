@@ -40,7 +40,7 @@ function periodicActivity() //
 
     var myDigitalValue =  analogPin0.read();
     if(myDigitalValue > 500){
-        officelol.sendChatMessage('denkomanceski@gmail.com', "Music is too loud, would you like me to turn it down a bit?")
+        officelol.sendChatMessage('denkomanceski@gmail.com', "Its kinda loud in this room isnt it ? Maybe lower down the volume?")
         //callApi(30);
     } else {
         //callApi(90);
