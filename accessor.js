@@ -1,6 +1,7 @@
 var mraa = require('mraa');
 var http = require('http');
 var url = '193.2.179.10:3000';
+var officelol = require('./office')
 var callApi = function(volume){
     var options = {
         host: '193.2.179.10',
@@ -39,9 +40,10 @@ function periodicActivity() //
 
     var myDigitalValue =  analogPin0.read();
     if(myDigitalValue > 500){
-        callApi(30);
+        officelol.sendChatMessage('denkomanceski@gmail.com', "Music is too loud, would you like me to turn it down a bit?")
+        //callApi(30);
     } else {
-        callApi(90);
+        //callApi(90);
     }
     //read the digital value of the pin
     console.log('Gpio is ' + myDigitalValue); //write the read value out to the console
