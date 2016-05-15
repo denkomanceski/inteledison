@@ -8,7 +8,7 @@ var http = require("http");
 var querystring = require('querystring');
 var config =  {
     apiUrl: 'sprint-app.4thoffice.com',
-    authToken: 'Bearer b14668b4-d02d-b34b-4838-77ad84fb4137'
+    authToken: 'Bearer 2dcd3a28-ebd4-1722-6b6c-e40cea65055b'
 };
 
 
@@ -20,7 +20,7 @@ var sendMailMessage = function(email, title, content) {
         headers: {
             'Content-Type': 'application/vnd.4thoffice.post-5.15+json',
             'Accept': 'application/vnd.4thoffice.post-5.15+json',
-            'Authorization': 'Bearer b14668b4-d02d-b34b-4838-77ad84fb4137'
+            'Authorization': config.authToken
         }
     };
     var req = http.request(options, function(res) {
@@ -60,7 +60,7 @@ var sendChatMessage = function(email, content)  {
         headers: {
             'Content-Type': 'application/vnd.4thoffice.post-5.15+json',
             'Accept': 'application/vnd.4thoffice.post-5.15+json',
-            'Authorization': 'Bearer b14668b4-d02d-b34b-4838-77ad84fb4137'
+            'Authorization': config.authToken
         }
     };
     var req = http.request(options, function(res){
