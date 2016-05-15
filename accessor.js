@@ -1,4 +1,4 @@
-//var mraa = require('mraa');
+var mraa = require('mraa');
 var http = require('http');
 var url = '193.2.179.10:3000';
 var callApi = function(volume){
@@ -21,7 +21,7 @@ var callApi = function(volume){
 };
 
 
-callApi(30);
+//callApi(30);
 // var writeAtPin = function(pinNr, binary){
 //     console.log('MRAA Version: ' + mraa.getVersion()); //write the mraa version to the console
 //     var myDigitalPin5 = new mraa.Gpio(pinNr); //setup digital read on Digital pin #5 (D5)
