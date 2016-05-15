@@ -47,5 +47,5 @@ function periodicActivity() //
     }
     //read the digital value of the pin
     console.log('Gpio is ' + myDigitalValue); //write the read value out to the console
-    setTimeout(periodicActivity,3000); //call the indicated function after 1 second (1000 milliseconds)
+    setTimeout(periodicActivity,1000); //call the indicated function after 1 second (1000 milliseconds)
 }
