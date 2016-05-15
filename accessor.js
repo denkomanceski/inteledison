@@ -1,11 +1,10 @@
 var mraa = require('mraa');
 
 var iterate = function(pinNr){
-    var button = new mraa.Aio(pinNr);     // set up digital read on digital pin #5<br>
-    button.dir(mraa.DIR_IN);           // set the GPIO direction to input<br><br>
-    var buttonState = button.read();   // read the value of the digital pin<br>
-    console.log(buttonState);
+    console.log('MRAA Version: ' + mraa.getVersion()); //write the mraa version to the console
+    var myDigitalPin5 = new mraa.Gpio(pinNr); //setup digital read on Digital pin #5 (D5)
+    myDigitalPin5.dir(mraa.DIR_OUT); //set the gpio direction to output
+    myDigitalPin5.write(1);
 };
-for(var i=0; i<16; i++){
-    iterate(i);
-}
+
+    iterate(6);
